@@ -1,15 +1,18 @@
 export interface WalletAddress {
-    currency: string;
-    address: string;
+  currency: string;
+  address: string;
 }
+
 export interface WalletAddressTransaction {
-    txId: string;
-    amount: number;
-    address: WalletAddress;
+  txId: string;
+  amount: number;
+  address: WalletAddress;
 }
+
 export interface BTCAddress extends WalletAddress {
-    currency: "BTC";
+  currency: "BTC";
 }
+
 export interface BTCTransaction extends WalletAddressTransaction {
-    address: BTCAddress;
+  address: BTCAddress;
 }

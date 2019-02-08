@@ -5,10 +5,12 @@ import {
   SharesWithChange
 } from "./structs";
 import { Query } from "../../system/public/structs";
+import { Msg } from "../../system/messageRegistry";
 import { ExtendedBalanceWithTotal } from "../../serviceExchanger/exchanger/public/structs";
 
 export class QueryStats extends Query { }
 
+@Msg()
 export class QueryStatsLastOrderStats extends QueryStats {
   result?: FromOrderChange;
 
@@ -17,6 +19,7 @@ export class QueryStatsLastOrderStats extends QueryStats {
   }
 }
 
+@Msg()
 export class QueryStatsBalanceBetweenDifference extends QueryStats {
   result?: BalanceDifference;
 
@@ -25,6 +28,7 @@ export class QueryStatsBalanceBetweenDifference extends QueryStats {
   }
 }
 
+@Msg()
 export class QueryStatsLastExtendedBalance extends QueryStats {
   result?: ExtendedBalanceWithTotal;
 
@@ -33,6 +37,7 @@ export class QueryStatsLastExtendedBalance extends QueryStats {
   }
 }
 
+@Msg()
 export class QueryStatsChangeByAsset extends QueryStats {
   result?: number;
 
@@ -41,6 +46,7 @@ export class QueryStatsChangeByAsset extends QueryStats {
   }
 }
 
+@Msg()
 export class QueryStatsBalanceChangePerDay extends QueryStats {
   result?: PerDayStats;
 
@@ -49,6 +55,7 @@ export class QueryStatsBalanceChangePerDay extends QueryStats {
   }
 }
 
+@Msg()
 export class QueryStatsIsAssetExist extends QueryStats {
   result?: boolean;
 
@@ -57,6 +64,7 @@ export class QueryStatsIsAssetExist extends QueryStats {
   }
 }
 
+@Msg()
 export class QueryStatsLastBalanceDivisionWithChanges extends QueryStats {
   result?: SharesWithChange;
 
@@ -65,6 +73,7 @@ export class QueryStatsLastBalanceDivisionWithChanges extends QueryStats {
   }
 }
 
+@Msg()
 export class QueryStatsAssetPrice extends QueryStats {
   result?: number;
 

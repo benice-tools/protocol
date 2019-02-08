@@ -1,7 +1,9 @@
+import { Msg } from "../../../system/messageRegistry";
 import { Event } from "../../../system/public/structs";
 import { BalancesWithTime } from "./structs";
 import { Order } from "./structs";
 
+@Msg()
 export class EventExchangerOrderUpdated extends Event {
   constructor(
     readonly keysId: string,
@@ -11,6 +13,7 @@ export class EventExchangerOrderUpdated extends Event {
   }
 }
 
+@Msg()
 export class EventExchangerBalancesUpdated extends Event {
   constructor(
     readonly keysId: string,
@@ -20,6 +23,7 @@ export class EventExchangerBalancesUpdated extends Event {
   }
 }
 
+@Msg()
 export class EventExchangerKeysDeleted extends Event {
   constructor(
     readonly keysId: string
@@ -28,6 +32,7 @@ export class EventExchangerKeysDeleted extends Event {
   }
 }
 
+@Msg()
 export class EventExchangerKeysDeletedNotification extends Event {
   constructor(
     readonly userId: string,
@@ -37,6 +42,7 @@ export class EventExchangerKeysDeletedNotification extends Event {
   }
 }
 
+@Msg()
 export class EventExchangerUnsubscribedFromPortfolio extends Event {
   constructor(
     readonly portfolioId: string,
@@ -47,6 +53,7 @@ export class EventExchangerUnsubscribedFromPortfolio extends Event {
   }
 }
 
+@Msg()
 export class EventExchangerKeysInvalidatedNotification extends Event {
   constructor(
     readonly keysId: string,

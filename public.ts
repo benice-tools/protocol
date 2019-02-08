@@ -13,3 +13,5 @@ export * from "./serviceWallet/public/messages";
 export * from "./serviceWallet/public/structs";
 export * from "./serviceAnalytics/public/messages";
 export * from "./system/public/structs";
+export * from "./system/messageRegistry";
+export * from "./system/errorCode";

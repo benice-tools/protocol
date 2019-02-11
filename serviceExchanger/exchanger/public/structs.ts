@@ -25,6 +25,7 @@ export interface ExtendedBalance {
   readonly usdSum: number;
   readonly usdDivisionPercent: number;
   readonly usdChangePercent: number;
+  readonly btcChangePercent: number;
 }
 
 export type ExtendedBalances = ReadonlyArray<ExtendedBalance>;

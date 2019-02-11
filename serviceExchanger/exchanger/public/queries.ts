@@ -1,4 +1,3 @@
-import { Msg } from "../../../system/messageRegistry";
 import { Query } from "../../../system/public/structs";
 import {
   ExtendedBalanceWithTotal} from "./structs";
@@ -6,7 +5,6 @@ import { KeysInfo, LastFixOp, PortfolioDescription } from "./structs";
 
 export class QueryExchanger extends Query { }
 
-@Msg()
 export class QueryExchangerExtendedBalance extends QueryExchanger {
   result?: ExtendedBalanceWithTotal;
 
@@ -15,7 +13,6 @@ export class QueryExchangerExtendedBalance extends QueryExchanger {
   }
 }
 
-@Msg()
 export class QueryExchangerUserKeys extends QueryExchanger {
   result?: KeysInfo[];
 
@@ -24,7 +21,6 @@ export class QueryExchangerUserKeys extends QueryExchanger {
   }
 }
 
-@Msg()
 export class QueryExchangerLastFixOperation extends QueryExchanger {
   result?: LastFixOp;
 
@@ -35,7 +31,6 @@ export class QueryExchangerLastFixOperation extends QueryExchanger {
   }
 }
 
-@Msg()
 export class QueryExchangerPortfolioNameExist extends QueryExchanger {
   result?: boolean;
 
@@ -46,12 +41,10 @@ export class QueryExchangerPortfolioNameExist extends QueryExchanger {
   }
 }
 
-@Msg()
 export class QueryExchangerPublicPortfolios extends QueryExchanger {
   result?: Array<string>; // portfolioIds
 }
 
-@Msg()
 export class QueryExchangerPortfolioDescription extends QueryExchanger {
   result?: PortfolioDescription;
 
@@ -60,7 +53,6 @@ export class QueryExchangerPortfolioDescription extends QueryExchanger {
   }
 }
 
-@Msg()
 export class QueryExchangerPortfolioBelongsToKeys extends QueryExchanger {
   result?: boolean;
 

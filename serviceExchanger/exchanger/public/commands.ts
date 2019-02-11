@@ -1,4 +1,3 @@
-import { Msg } from "../../../system/messageRegistry";
 import { SupportedExchanges } from "./structs";
 import { Command } from "../../../system/public/structs";
 import { BalanceDivision, PortfolioDescription } from "./structs";
@@ -6,7 +5,6 @@ import { BalanceDivision, PortfolioDescription } from "./structs";
 export class CommandExchanger extends Command {
 }
 
-@Msg()
 export class CommandExchangerCreateKeys extends CommandExchanger {
   result?: string; // keysId
 
@@ -21,7 +19,6 @@ export class CommandExchangerCreateKeys extends CommandExchanger {
   }
 }
 
-@Msg()
 export class CommandExchangerUpdateKeys extends CommandExchanger {
   constructor(
     readonly keysId: string,
@@ -33,7 +30,6 @@ export class CommandExchangerUpdateKeys extends CommandExchanger {
   }
 }
 
-@Msg()
 export class CommandExchangerDeleteKeys extends CommandExchanger {
   constructor(
     readonly keysId: string,
@@ -42,7 +38,6 @@ export class CommandExchangerDeleteKeys extends CommandExchanger {
   }
 }
 
-@Msg()
 export class CommandExchangerFix extends CommandExchanger {
   constructor(
     readonly keysId: string,
@@ -53,7 +48,6 @@ export class CommandExchangerFix extends CommandExchanger {
   }
 }
 
-@Msg()
 export class CommandExchangerUnfix extends CommandExchanger {
   constructor(
     readonly keysId: string,
@@ -62,7 +56,6 @@ export class CommandExchangerUnfix extends CommandExchanger {
   }
 }
 
-@Msg()
 export class CommandExchangerPublishPortfolio extends CommandExchanger {
   constructor(
     readonly keysId: string,
@@ -74,7 +67,6 @@ export class CommandExchangerPublishPortfolio extends CommandExchanger {
   result?: string; // portfolioId
 }
 
-@Msg()
 export class CommandExchangerDeletePortfolio extends CommandExchanger {
   constructor(
     readonly portfolioId: string
@@ -83,7 +75,6 @@ export class CommandExchangerDeletePortfolio extends CommandExchanger {
   }
 }
 
-@Msg()
 export class CommandExchangerSubscribeToPortfolio extends CommandExchanger {
   constructor(
     readonly keysId: string,
@@ -93,7 +84,6 @@ export class CommandExchangerSubscribeToPortfolio extends CommandExchanger {
   }
 }
 
-@Msg()
 export class CommandExchangerUnsubscribeFromPortfolio extends CommandExchanger {
   constructor(
     readonly keysId: string,
@@ -103,7 +93,6 @@ export class CommandExchangerUnsubscribeFromPortfolio extends CommandExchanger {
   }
 }
 
-@Msg()
 export class CommandExchangerClonePortfolio extends CommandExchanger {
   constructor(
     readonly keysId: string,

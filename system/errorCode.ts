@@ -1,5 +1,5 @@
 export default class ErrorCode extends Error {
-  public constructor(message, readonly code: Errors|string) {
+  public constructor(message: string, readonly code: Errors|string) {
     super(message);
   }
 }

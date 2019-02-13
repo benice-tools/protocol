@@ -60,7 +60,7 @@ export interface AssetShare {
   [asset: string]: number;
 }
 
-export type BalanceDivision = ReadonlyArray<AssetShare>;
+export type BalanceDivision = Array<AssetShare>;
 
 export interface Order {
   readonly symbol: string;

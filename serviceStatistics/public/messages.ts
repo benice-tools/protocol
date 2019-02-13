@@ -5,7 +5,10 @@ import {
   SharesWithChange
 } from "./structs";
 import { Query } from "../../system/public/structs";
-import { ExtendedBalanceWithTotal } from "../../serviceExchanger/exchanger/public/structs";
+import {
+  ExtendedBalanceWithTotal,
+  PublicPortfolio
+} from "../../serviceExchanger/exchanger/public/structs";
 
 export class QueryStats extends Query { }
 
@@ -60,7 +63,7 @@ export class QueryStatsIsAssetExist extends QueryStats {
 export class QueryStatsLastBalanceDivisionWithChanges extends QueryStats {
   result?: SharesWithChange;
 
-  constructor(public keysId: string) {
+  constructor(public keysId: string, public disableSmallBalance:boolean = false) {
     super();
   }
 }
@@ -69,6 +72,22 @@ export class QueryStatsAssetPrice extends QueryStats {
   result?: number;
 
   constructor(public base: string, public quote: string) {
+    super();
+  }
+}
+
+export class QueryStatsPublicPortfolio extends QueryStats {
+  result?: PublicPortfolio;
+
+  constructor(readonly portfolioId: string) {
+    super();
+  }
+}
+
+export class QueryStatsPublicPortfolioChangePerDay extends QueryStats {
+  result?: PerDayStats;
+
+  constructor(readonly portfolioId: string, public startTime: number, public endTime: number) {
     super();
   }
 }

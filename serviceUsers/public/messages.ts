@@ -75,11 +75,3 @@ export class QueryUsersNotificationSettings extends QueryUsers {
 
   result?: OrderNotifications;
 }
-
-export class QueryUsersPublicPortfolio extends QueryUsers {
-  result?: PublicPortfolio;
-
-  constructor(readonly portfolioId: string) {
-    super();
-  }
-}

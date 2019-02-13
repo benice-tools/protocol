@@ -42,7 +42,8 @@ export class CommandExchangerFix extends CommandExchanger {
   constructor(
     readonly keysId: string,
     readonly target: BalanceDivision,
-    readonly percent = 100
+    readonly percent = 100,
+    readonly from = undefined,
   ) {
     super();
   }

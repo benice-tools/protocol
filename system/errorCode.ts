@@ -5,7 +5,12 @@ export default class ErrorCode extends Error {
 }
 
 export enum Errors {
+  notFound = "notFound",
+
   unauthorized = "unauthorized",
+
   invalidKeys = "invalidKeys",
-  notEnoughFunds = "notEnoughFunds"
+
+  notEnoughFunds = "notEnoughFunds",
+  promoCodeExpired = "promoCodeAlreadyUsed"
 }
